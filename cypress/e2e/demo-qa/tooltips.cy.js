@@ -1,6 +1,6 @@
-import toolTips from "../pageObjects/toolTips";
+import toolTips from "../../pageObjects/toolTips";
 
-context("Interactions", () => {
+context("ToolTips", () => {
     beforeEach(() => {
       toolTips.visit();
     });
