@@ -16,6 +16,10 @@ class RadioPage extends BasePage {
   static get clickImpressive() {
     return cy.get("[for*='impressiveRadio']");
   }
+
+  static get disabledNo() {
+    return cy.get("[class*='custom-control-label disabled']");
+  }
 }
 
 export default RadioPage;
