@@ -40,21 +40,28 @@ context("Interactions", () => {
         .click();
       SelectablePage.selectValues
         .contains("Four")
-        .click()
+        .click();
+      SelectablePage.checkValues
+        .contains("Four")
         .should("have.class", "active");
       SelectablePage.selectValues
         .contains("Eight")
-        .click()
+        .click();
+      SelectablePage.checkValues
+        .contains("Eight")
         .should("have.class", "active");
       SelectablePage.selectValues
         .contains("Six")
-        .click()
+        .click();
+      SelectablePage.checkValues
+        .contains("Six")
         .should("have.class", "active");
       SelectablePage.selectValues
         .contains("Two")
-        .click()
+        .click();
+      SelectablePage.checkValues
+        .contains("Two")
         .should("have.class", "active");
-
     });
   });
 });

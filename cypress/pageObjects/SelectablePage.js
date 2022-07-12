@@ -18,7 +18,11 @@ class SelectablePage extends BasePage {
   }
 
   static get selectValues() {
-    return cy.get("[class*='list-group-item list-group-item-action']");
+    return cy.get("#demo-tabpane-grid");
+  }
+
+  static get checkValues() {
+    return cy.get("[class*='list-group-item active list-group-item-action']");
   }
 }
 
