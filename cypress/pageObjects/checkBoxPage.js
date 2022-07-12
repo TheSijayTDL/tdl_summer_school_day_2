@@ -32,6 +32,38 @@ class checkBoxPage extends BasePage {
   static get selectOptionOffice() {
     return cy.get("[for*='tree-node-office']");
   }
+
+  static get validateCheckNotes() {
+    return cy.get("#tree-node-notes");
+  }
+
+  static get validateCheckReact() {
+    return cy.get("#tree-node-react");
+  }
+
+  static get validateCheckAngular() {
+    return cy.get("#tree-node-angular");
+  }
+
+  static get validateCheckGeneral() {
+    return cy.get("#tree-node-general");
+  }
+  
+  static get validateCheckExcel() {
+    return cy.get("#tree-node-excelFile");
+  }
+
+  static get validateCheckPublic() {
+    return cy.get("#tree-node-public");
+  }
+
+  static get validateCheckPrivate() {
+    return cy.get("#tree-node-private");
+  }
+
+  static get validateCheckClassified() {
+    return cy.get("#tree-node-classified");
+  }
 }
 
 export default checkBoxPage;

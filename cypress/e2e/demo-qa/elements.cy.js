@@ -59,18 +59,23 @@ context("Elements Page", () => {
         checkBoxPage.selectOptionNotes
           .should("be.visible")
           .click();
+        checkBoxPage.validateCheckNotes.should("be.checked");
         checkBoxPage.selectOptionReact
           .should("be.visible")
           .click();
+        checkBoxPage.validateCheckReact.should("be.checked");
         checkBoxPage.selectOptionAngular
           .should("be.visible")
           .click();
+        checkBoxPage.validateCheckAngular.should("be.checked");
         checkBoxPage.selectOptionGeneral
           .should("be.visible")
           .click();
+        checkBoxPage.validateCheckGeneral.should("be.checked");
         checkBoxPage.selectOptionExcel
           .should("be.visible")
           .click();
+        checkBoxPage.validateCheckExcel.should("be.checked");
     });
 
 
@@ -86,6 +91,10 @@ context("Elements Page", () => {
       checkBoxPage.selectOptionOffice
         .should("be.visible")
         .click();
+      checkBoxPage.validateCheckPublic.should("be.checked");
+      checkBoxPage.validateCheckPrivate.should("be.checked");
+      checkBoxPage.validateCheckClassified.should("be.checked");
+      checkBoxPage.validateCheckGeneral.should("be.checked");
     });
   });
 
