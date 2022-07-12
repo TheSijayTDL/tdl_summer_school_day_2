@@ -36,8 +36,7 @@ context("Interactions", () => {
     // Validate that chosen buttons contains class active
 
     it("Selectable elements scenario (2)", () => {
-      SelectablePage.selectGrid
-        .click();
+      SelectablePage.selectGrid.click();
       SelectablePage.selectValues
         .contains("Four")
         .click();

@@ -111,18 +111,15 @@ context("Elements Page", () => {
     // noButton - validate that the button exists but is disabled
 
     it("Radio first scenario", () => {
-      RadioPage.clickYes
-        .click();
+      RadioPage.clickYes.click();
       RadioPage.textSuccess
         .should("be.visible")
-        .should("include.text", "Yes");
-      RadioPage.clickImpressive
-        .click();
+        .and("include.text", "Yes");
+      RadioPage.clickImpressive.click();
       RadioPage.textSuccess
         .should("be.visible")
-        .should("include.text", "Impressive");  
-      RadioPage.disabledNo
-        .should("be.visible");
+        .and("include.text", "Impressive");  
+      RadioPage.disabledNo.should("be.visible");
   });
 });
 
@@ -139,41 +136,24 @@ context("Elements Page", () => {
     // validate tha the user is visible
 
     it("WebTables first scenario", () => {
-      WebPage.clickAdd
-        .click();
-      WebPage.firstName
-        .click()
-        .type("Test");
-      WebPage.lastName
-        .click()
-        .type("aaa");
-      WebPage.userEmail
-        .click()
-        .type("test@gmail.com");
-      WebPage.userAge
-        .click()
-        .type("20");
-      WebPage.userSalary
-        .click()
-        .type("1");
-      WebPage.userDepartment
-        .type("yes");
-      WebPage.btnSubmit
-        .click();
-      WebPage.checkUser
-        .should("include.text", "test@gmail.com");
+      WebPage.clickAdd.click();
+      WebPage.firstName.type("Test");
+      WebPage.lastName.type("aaa");
+      WebPage.userEmail.type("test@gmail.com");
+      WebPage.userAge.type("20");
+      WebPage.userSalary.type("1");
+      WebPage.userDepartment.type("yes");
+      WebPage.btnSubmit.click();
+      WebPage.checkUser.should("include.text", "test@gmail.com");
     });
     // Create Scenario 2:
     // Delete all table rows
     // Validate that we see text - No rows found
 
     it("WebTables second scenario", () => {
-      WebPage.deleteFirstRow
-        .click();
-      WebPage.deleteSecondRow
-        .click();  
-      WebPage.deleteThirdRow
-        .click();   
+      WebPage.deleteFirstRow.click();
+      WebPage.deleteSecondRow.click();  
+      WebPage.deleteThirdRow.click();   
       WebPage.noData
         .should("be.visible")
         .should("have.text", "No rows found");
@@ -195,18 +175,15 @@ context("Elements Page", () => {
     // Validate dynamic click message
 
     it("Buttons clicking scenario", () => {
-      Buttons.clickDouble
-        .dblclick();
+      Buttons.clickDouble.dblclick();
       Buttons.doubleMessage
         .should("be.visible")
         .and("have.text", "You have done a double click");
-      Buttons.clickRight
-        .rightclick();
+      Buttons.clickRight.rightclick();
       Buttons.rightMessage
         .should("be.visible")
         .and("have.text", "You have done a right click");
-      Buttons.clickDynamic
-        .dblclick();
+      Buttons.clickDynamic.dblclick();
       Buttons.dynamicMessage
         .should("be.visible")
         .and("have.text", "You have done a dynamic click");
